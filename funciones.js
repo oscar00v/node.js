@@ -34,10 +34,98 @@ function sorteo(varnumSorteo){
     }
 }
 
+function compararVariables(Num1, Num2){
+    if(Num1> Num2){
+        console.log(`${Num1} es mayor a ${Num2}`);
+    }else{
+        console.log(`${Num2} es mayor a ${Num1}`);
+    }
+
+}
+
+function v3acomparar(num1, num2, num3){
+
+    let mayor;
+
+
+    if (num1 >= num2 && num1 >= num3) {
+    
+      mayor = num1;
+    
+    } else if (num2 >= num1 && num2 >= num3) {
+    
+      mayor = num2;
+    
+    } else {
+    
+      mayor = num3;
+    
+    }
+    
+    
+    // Mostrar el resultado
+    
+    if (num1 == num2 && num1 == num3) {
+    
+      console.log("Los tres números son iguales");
+    
+    } else if (num1 == num2 || num1 == num3 || num2 == num3) {
+    
+      console.log("Hay dos números iguales, y el mayor es: "+mayor);
+    
+    } else {
+    
+      console.log("El número mayor es: " +mayor);
+    
+    }
+    
+}
+function fsemana(dia){
+
+    if(dia == "Lunes"){
+
+        console.log("Hoy es Lunes, hay que chambiar");
+    
+    }else if(dia == "Viernes"){
+    
+        console.log("Hoy es Viernes, toca chelas");
+    
+    }else if(dia == "Sabado" || dia == "Domingo"
+    ){
+    
+        console.log("Es fin de semana, a descansar");
+        
+    }else {
+        console.log("Animo");
+    
+    }
+
+}
+
+function fCalificacion(vCali){
+    if(vCali<=10 && vCali>=1){
+        if(vCali<6){
+            console.log("Reprobado");
+        }else if(vCali >=6 && vCali<=8){
+            console.log("Regular");
+        }else if(vCali == 9){
+            console.log("Bien");
+        }else{
+            console.log("Exelente");
+        }
+    
+    }else{
+        console.log("no se puede poner numeros mayores a 10 y menores a 1");
+    }
 
 
 
+}
 export {Eresbello as FunctionBello};
 export {div2 as div2};
 export {numEsPar as NumPar};
 export {sorteo as sorteofunction};
+export {compararVariables}
+export {v3acomparar as fcompare};
+export {fsemana};
+export {fCalificacion as funcionCalificacion}
